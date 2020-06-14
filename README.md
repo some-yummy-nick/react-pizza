@@ -1,6 +1,7 @@
 # React pizza
 [макет](https://www.figma.com/file/rpuFNbwNP6FA1ZIREd5hQk/React-Pizza?node-id=1%3A2)
 
+[Результат](https://some-yummy-react-pizza.netlify.app)
 ***
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

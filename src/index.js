@@ -5,6 +5,9 @@ import {BrowserRouter} from "react-router-dom";
 import App from "components/App/App";
 import store from "./store";
 
+import "normalize.css";
+import "./index.scss";
+
 ReactDOM.render(
     <React.StrictMode>
         <Provider store={store}>
