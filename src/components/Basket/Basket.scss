@@ -1,0 +1,45 @@
+.basket {
+    background-color: $primary;
+    border-radius: 30px;
+
+    &__link{
+        display: inline-block;
+        color: #fff;
+        font-weight: 700;
+        padding: 15px 20px;
+    }
+
+    &__wrapper{
+        display: flex;
+        align-items: center;
+    }
+
+    &__sum{
+        position: relative;
+        padding-right: 15px;
+
+        &::after {
+            content: "";
+            position: absolute;
+            display: block;
+            height: 25px;
+            width: 1px;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.25);
+        }
+    }
+
+    &__count{
+        display: flex;
+        align-items: center;
+        margin-left: 15px;
+    }
+
+    &__icon {
+        margin-right: 10px;
+        stroke: #fff;
+    }
+
+}

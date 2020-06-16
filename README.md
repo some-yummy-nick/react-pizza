@@ -1,5 +1,5 @@
 # React pizza
-[макет](https://www.figma.com/file/rpuFNbwNP6FA1ZIREd5hQk/React-Pizza?node-id=1%3A2)
+[Макет](https://www.figma.com/file/rpuFNbwNP6FA1ZIREd5hQk/React-Pizza?node-id=1%3A2)
 
 [Результат](https://some-yummy-react-pizza.netlify.app)
 ***
