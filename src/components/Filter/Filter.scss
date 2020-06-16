@@ -1,0 +1,26 @@
+.filter {
+    &__items {
+        display: flex;
+        margin-left: -10px;
+    }
+
+    &__item {
+        margin-left: 10px;
+    }
+
+    &__button {
+        padding: 15px 25px;
+        background-color: #F9F9F9;
+        border-radius: $border-radius;
+
+        &.active {
+            color: #fff;
+            background-color: $color;
+        }
+
+        &:hover{
+            background-color: $primary;
+            color: #fff;
+        }
+    }
+}

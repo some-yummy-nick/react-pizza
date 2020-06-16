@@ -1,6 +1,12 @@
 @import "scss/utils/variables.scss";
+@import "scss/base.scss";
+@import "scss/custom/reset-btn.scss";
+@import "scss/custom/reset-list.scss";
 @import "scss/custom/icon.scss";
 @import "components/App/App.scss";
 @import "components/Header/Header.scss";
 @import "components/Logo/Logo.scss";
 @import "components/Basket/Basket.scss";
+@import "components/Choose/Choose.scss";
+@import "components/Filter/Filter.scss";
+@import "components/Sort/Sort.scss";

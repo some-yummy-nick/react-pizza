@@ -7,7 +7,7 @@ export const Basket = () =>
             <div className="basket__wrapper">
                 <div className="basket__sum">520 ₽</div>
                 <div className="basket__count">
-                    <svg className="icon icon_basket basket__icon">
+                    <svg width="18" height="18" className="icon icon_basket basket__icon">
                         <use xlinkHref="#basket"/>
                     </svg>
                     3

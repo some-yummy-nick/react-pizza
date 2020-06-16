@@ -1,6 +1,6 @@
 .basket {
     background-color: $primary;
-    border-radius: 30px;
+    border-radius: $border-radius;
 
     &__link{
         display: inline-block;

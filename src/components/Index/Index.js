@@ -1,5 +1,9 @@
 import React from 'react';
 
-export const Index = () => <></>;
+import Choose from "components/Choose/Choose";
+
+export const Index = () => <>
+    <Choose/>
+</>;
 
 export default Index;
