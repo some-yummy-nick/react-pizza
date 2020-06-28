@@ -1,20 +1,34 @@
 .basket {
-    background-color: $primary;
-    border-radius: $border-radius;
 
-    &__link{
+    &__link {
         display: inline-block;
         color: #fff;
         font-weight: 700;
         padding: 15px 20px;
+        background-color: $primary;
+        border-radius: $border-radius;
+        border: 1px solid transparent;
+        transition: color 0.3s, background-color 0.3s, border-color 0.3s;
+
+        &:hover {
+            background-color: #fff;
+            color: $primary;
+            border-color: $primary;
+
+            .basket {
+                &__icon {
+                    stroke: $primary;
+                }
+            }
+        }
     }
 
-    &__wrapper{
+    &__wrapper {
         display: flex;
         align-items: center;
     }
 
-    &__sum{
+    &__sum {
         position: relative;
         padding-right: 15px;
 
@@ -31,7 +45,7 @@
         }
     }
 
-    &__count{
+    &__count {
         display: flex;
         align-items: center;
         margin-left: 15px;
