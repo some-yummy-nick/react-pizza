@@ -1,6 +1,10 @@
-body{
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+body {
     font-family: "Proxima Nova";
 }
+
 .container {
     max-width: 1300px;
     margin-left: auto;
@@ -14,8 +18,4 @@ body{
 
 .align-center {
     align-items: center;
-}
-
-a{
-    text-decoration: none;
 }

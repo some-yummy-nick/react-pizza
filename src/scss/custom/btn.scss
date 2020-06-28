@@ -1,0 +1,51 @@
+.btn{
+    display: inline-block;
+    padding: 10px 15px;
+    font-weight: 700;
+    border-radius: $border-radius;
+
+    &_border{
+        border: 1px solid $primary;
+        color: $primary;
+
+        &:hover{
+            background-color: $primary;
+            color: #fff;
+        }
+    }
+
+    &_gray-border{
+        border: 1px solid #D3D3D3;
+        color: #D3D3D3;
+        font-weight: 400;
+
+        &:hover{
+            border-color: $color;
+            color: $color;
+        }
+    }
+
+    &_black{
+        background-color: $color;
+        color: #fff;
+        border: 1px solid transparent;
+
+        &:hover{
+            background-color: #fff;
+            color: $color;
+            border-color: $color;
+        }
+    }
+
+    &_primary{
+        background-color: $primary;
+        color: #fff;
+        border: 1px solid transparent;
+
+        &:hover{
+            background-color: #fff;
+            border-color: $primary;
+            color: $primary;
+        }
+    }
+}

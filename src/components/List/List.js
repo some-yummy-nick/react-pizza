@@ -2,7 +2,7 @@ import React from 'react';
 
 export const List = () =>
     <div className="list">
-        <h1 className="list__title">Все пиццы</h1>
+        <h1 className="title list__title">Все пиццы</h1>
         <div className="list__items">
             <div className="list__item">
                 <div className="list__image">
@@ -33,7 +33,7 @@ export const List = () =>
                     </div>
                     <div className="list__bottom">
                         <div className="list__price">от 395 ₽</div>
-                        <button type="button" className="list__add reset-btn">
+                        <button type="button" className="btn btn_border list__add reset-btn">
                             <span className="list__add-text">Добавить</span>
                             <span className="list__add-number">2</span>
                         </button>

@@ -1,5 +1,6 @@
 a {
-    transition: opacity 0.3s;
+    transition: opacity 0.3s, color 0.3s, background-color 0.3s, border 0.3s;
+    text-decoration: none;
 }
 
 button {
@@ -13,4 +14,8 @@ button {
 
 svg {
     transition: stroke 0.3s, fill 0.3s, filter 0.3s;
+}
+
+img {
+    max-width: 100%;
 }

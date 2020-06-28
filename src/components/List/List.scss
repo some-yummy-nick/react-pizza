@@ -1,8 +1,7 @@
 .list {
-    &__title {
+
+    &__title{
         margin-bottom: 35px;
-        font-size: 32px;
-        font-weight: 700;
     }
 
     &__items {
@@ -61,7 +60,6 @@
         font-size: 14px;
         line-height: 17px;
         padding: 7.5px 10px;
-        letter-spacing: 0.015em;
         border-radius: 5px;
         text-align: center;
 
@@ -85,15 +83,9 @@
     &__price {
         font-weight: 700;
         font-size: 22px;
-        letter-spacing: 0.015em;
     }
 
     &__add {
-        padding: 10px 15px;
-        font-weight: 700;
-        border-radius: $border-radius;
-        border: 1px solid $primary;
-        color: $primary;
 
         &-text {
             position: relative;
@@ -131,8 +123,6 @@
         }
 
         &:hover {
-            background-color: $primary;
-            color: #fff;
 
             .list {
                 &__add {
