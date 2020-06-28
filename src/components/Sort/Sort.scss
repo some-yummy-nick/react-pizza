@@ -1,4 +1,17 @@
 .sort {
+    &__wrapper{
+        position: relative;
+        &:hover,
+        &:focus-within {
+
+            .sort__list {
+                opacity: 1;
+                transform: rotateX(0) translateX(-50%);
+            }
+
+        }
+    }
+
     &__icon {
         margin-right: 7px;
     }
@@ -20,6 +33,14 @@
     }
 
     &__list {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: rotateX(-90deg) translateX(-50%);
+        transform-origin: top center;
+        transition: 280ms all ease-out;
+        opacity: 0.3;
+        width:100%;
         padding: 15px 0;
         background-color: #fff;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.09);
@@ -30,6 +51,10 @@
         width: 100%;
         padding: 10px 15px;
         text-align: left;
+
+        &:hover{
+            color: $primary;
+        }
 
         &.active {
             background-color: rgba(254, 95, 30, 0.05);
