@@ -25,10 +25,17 @@ export class List extends PureComponent {
     }
 }
 
+const filterItems = (items, category) => {
+    if (category.title === "all") {
+        return items;
+    }
+    return items.filter(o => o.category === category.id);
+};
+
 const sortBy = (items, sort) => orderBy(items, sort.title, sort.isReversed ? "asc" : "desc");
 
-const mapStateToProps = state => ({
-    items: sortBy(state.items.items, state.sort.sort),
+const mapStateToProps = ({items, sort, category}) => ({
+    items: items.items && sortBy(filterItems(items.items, category.category), sort.sort),
 });
 
 export default connect(mapStateToProps, {getItems})(List);

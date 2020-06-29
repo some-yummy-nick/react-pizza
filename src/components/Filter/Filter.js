@@ -1,4 +1,6 @@
 import React from 'react';
+import {connect} from "react-redux";
+import {setCategory} from "store/actions/category";
 
 const filters = [
     {
@@ -33,13 +35,15 @@ const filters = [
     },
 ];
 
-export const Filter = () =>
+export const Filter = ({category, setCategory}) =>
     <div className="filter">
         <ul className="filter__items reset-list">
             {
                 filters.map(filter =>
                     <li className="filter__item" key={`filter-${filter.id}`}>
-                        <button className="filter__button reset-btn" data-name={filter.title}
+                        <button className={`filter__button reset-btn${filter.id === category.id ? " active" : ""}`}
+                                data-name={filter.title}
+                                onClick={() => setCategory(filter)}
                                 type="button">{filter.text}</button>
                     </li>
                 )
@@ -47,4 +51,9 @@ export const Filter = () =>
         </ul>
     </div>;
 
-export default Filter;
+
+const mapStateToProps = state => ({
+    category: state.category.category,
+});
+
+export default connect(mapStateToProps, {setCategory})(Filter);
