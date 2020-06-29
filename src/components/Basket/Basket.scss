@@ -19,6 +19,12 @@
                 &__icon {
                     stroke: $primary;
                 }
+
+                &__sum{
+                    &:after{
+                        background-color: rgba($primary, 0.25);
+                    }
+                }
             }
         }
     }

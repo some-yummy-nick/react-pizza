@@ -33,7 +33,7 @@ const filters = [
     },
 ];
 
-export const Filter = () => <>
+export const Filter = () =>
     <div className="filter">
         <ul className="filter__items reset-list">
             {
@@ -45,7 +45,6 @@ export const Filter = () => <>
                 )
             }
         </ul>
-    </div>
-</>;
+    </div>;
 
 export default Filter;
