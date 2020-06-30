@@ -75,4 +75,5 @@ export class Item extends PureComponent {
 const mapStateToProps = state => ({
     cartItems: state.cart.items,
 });
+
 export default connect(mapStateToProps, {addToCart})(Item);

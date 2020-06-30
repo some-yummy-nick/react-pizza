@@ -51,7 +51,6 @@ export const Filter = ({category, setCategory}) =>
         </ul>
     </div>;
 
-
 const mapStateToProps = state => ({
     category: state.category.category,
 });
