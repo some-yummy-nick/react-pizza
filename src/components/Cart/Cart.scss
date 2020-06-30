@@ -138,6 +138,11 @@
                 filter: brightness(0);
             }
         }
+
+        &:focus{
+            outline: none;
+            border-color: $color;
+        }
     }
 
     &__minus {

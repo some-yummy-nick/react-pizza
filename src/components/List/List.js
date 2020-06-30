@@ -11,10 +11,10 @@ export class List extends PureComponent {
     }
 
     render() {
-        const {items} = this.props;
+        const {items,category} = this.props;
 
         return <div className="list">
-            <h1 className="title list__title">Все пиццы</h1>
+            <h1 className="title list__title">{category.text} пиццы</h1>
             <div className="list__items">
                 {
                     !items ?
@@ -36,6 +36,7 @@ const sortBy = (items, sort) => orderBy(items, sort.title, sort.isReversed ? "as
 
 const mapStateToProps = ({items, sort, category}) => ({
     items: items.items && sortBy(filterItems(items.items, category.category), sort.sort),
+    category: category.category
 });
 
 export default connect(mapStateToProps, {getItems})(List);

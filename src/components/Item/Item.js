@@ -1,8 +1,9 @@
 import React, {PureComponent} from 'react';
 import classNames from 'classnames';
+import {connect} from "react-redux";
+import {addToCart} from "store/actions/cart";
 
 const availableSizes = [26, 30, 40];
-
 const availableTypes = ['тонкое', 'традиционное'];
 
 export class Item extends PureComponent {
@@ -21,7 +22,8 @@ export class Item extends PureComponent {
 
     render() {
         const {activeType, activeSize} = this.state;
-        const {item} = this.props;
+        const {cartItems, item, addToCart} = this.props;
+        const cartItem = cartItems.find(o => o.id === item.id);
 
         return <div className="list__item">
             <div className="list__image">
@@ -56,9 +58,13 @@ export class Item extends PureComponent {
                 </div>
                 <div className="list__bottom">
                     <div className="list__price">от {item.price} ₽</div>
-                    <button type="button" className="btn btn_border list__add reset-btn">
+                    <button type="button" className="btn btn_border list__add reset-btn"
+                            onClick={() => addToCart(item)}>
                         <span className="list__add-text">Добавить</span>
-                        <span className="list__add-number">2</span>
+                        {cartItem ?
+                            <span className="list__add-number">{cartItem.quantity}</span>
+                            : ""
+                        }
                     </button>
                 </div>
             </div>
@@ -66,4 +72,7 @@ export class Item extends PureComponent {
     }
 }
 
-export default Item;
+const mapStateToProps = state => ({
+    cartItems: state.cart.items,
+});
+export default connect(mapStateToProps, {addToCart})(Item);

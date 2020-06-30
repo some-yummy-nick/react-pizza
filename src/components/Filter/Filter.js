@@ -16,7 +16,7 @@ const filters = [
     {
         id: 2,
         title: "vegetarian",
-        text: "Вегетарианская"
+        text: "Вегетарианские"
     },
     {
         id: 3,

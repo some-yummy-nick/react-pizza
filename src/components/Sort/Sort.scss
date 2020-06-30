@@ -60,6 +60,10 @@
             color: $primary;
         }
 
+        &:focus{
+            outline: none;
+        }
+
         &.active {
             background-color: rgba(254, 95, 30, 0.05);
             font-weight: 700;

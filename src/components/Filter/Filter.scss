@@ -22,5 +22,10 @@
             background-color: $primary;
             color: #fff;
         }
+
+        &:focus{
+            outline: none;
+            border-color: $color;
+        }
     }
 }
