@@ -3,6 +3,8 @@ import {Link} from "react-router-dom";
 import {connect} from "react-redux";
 import {removeFromCart, addQuantity, subQuantity, clearCart} from "store/actions/cart";
 
+const availableTypes = ['тонкое', 'традиционное'];
+
 export const Cart = ({items, total, removeFromCart, addQuantity, subQuantity, clearCart}) =>
     <div className="cart">
         {!items.length ?
@@ -43,7 +45,7 @@ export const Cart = ({items, total, removeFromCart, addQuantity, subQuantity, cl
                             </div>
                             <div className="cart__desc">
                                 <div className="cart__name">{item.name}</div>
-                                <div className="cart__text">тонкое тесто, 26 см.</div>
+                                <div className="cart__text">{availableTypes[item.types]} тесто, {item.sizes} см.</div>
                             </div>
                         </div>
                         <div className="cart__change">

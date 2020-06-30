@@ -20,9 +20,17 @@ export class Item extends PureComponent {
         this.setState({activeSize: this.props.item.sizes[index]})
     };
 
+    handleAdd(item) {
+        this.props.addToCart({
+            ...item,
+            types: this.state.activeType,
+            sizes: this.state.activeSize
+        });
+    }
+
     render() {
         const {activeType, activeSize} = this.state;
-        const {cartItems, item, addToCart} = this.props;
+        const {cartItems, item} = this.props;
         const cartItem = cartItems.find(o => o.id === item.id);
 
         return <div className="list__item">
@@ -59,7 +67,7 @@ export class Item extends PureComponent {
                 <div className="list__bottom">
                     <div className="list__price">от {item.price} ₽</div>
                     <button type="button" className="btn btn_border list__add reset-btn"
-                            onClick={() => addToCart(item)}>
+                            onClick={() => this.handleAdd(item)}>
                         <span className="list__add-text">Добавить</span>
                         {cartItem ?
                             <span className="list__add-number">{cartItem.quantity}</span>
