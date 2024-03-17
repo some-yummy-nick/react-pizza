@@ -1,4 +1,4 @@
-![screenshot](https://github.com/some-yummy-nick/react-pizza/blob/master/react-pizza.png)
+![screenshot](https://github.com/some-yummy-nick/react-pizza/blob/main/react-pizza.png)
 
 # React pizza
 [Макет](https://www.figma.com/file/rpuFNbwNP6FA1ZIREd5hQk/React-Pizza?node-id=1%3A2)
